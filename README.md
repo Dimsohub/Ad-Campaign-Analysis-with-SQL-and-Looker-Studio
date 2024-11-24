@@ -11,4 +11,5 @@ The data for this project was extracted from a PostgreSQL database containing fo
 ![Facebook_and_Google_ads](https://drive.google.com/file/d/1eR33Jd9KA-m174hAf2KwHb1KffGqP4MB/view?usp=sharing)
 
 ## Tools
-Dbeaver, Looker Studio
+DBeaver, Looker Studio
+
