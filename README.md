@@ -65,7 +65,7 @@ The query filters out records with zero clicks, impressions, or spend to avoid d
 ~~~SQL
 WITH combined_ads AS (
 SELECT
-		ad_date,
+        ad_date,
 	'Facebook Ads' AS media_source,
 	spend,
 	impressions,
@@ -76,7 +76,7 @@ SELECT
 FROM
 	facebook_ads_basic_daily f
 WHERE
-		ad_date IS NOT NULL
+        ad_date IS NOT NULL
 UNION ALL
 SELECT
 	ad_date,
