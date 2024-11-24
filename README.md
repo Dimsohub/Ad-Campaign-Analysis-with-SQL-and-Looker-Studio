@@ -8,7 +8,7 @@ The data for this project was extracted from a PostgreSQL database containing fo
 * **Facebook Ads:** `facebook_ads_basic_daily`, `facebook_adset`, `facebook_campaign`
 * **Google Ads:** `google_ads_basic_daily`
   
-![Facebook_and_Google_ads](https://drive.google.com/file/d/1eR33Jd9KA-m174hAf2KwHb1KffGqP4MB/view?usp=sharing)
+![Facebook_and_Google_ads](Facebook_and_Google_ads.png)
 
 ## Tools
 DBeaver, Looker Studio
