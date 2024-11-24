@@ -15,7 +15,7 @@ DBeaver, Looker Studio
 
 ## SQL Queries
 
-### Calculating key metrics for each day and campaign
+### Query 1. Calculating key metrics for each day and campaign
 
 ~~~SQL
 SELECT
