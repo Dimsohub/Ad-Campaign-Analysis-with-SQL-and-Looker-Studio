@@ -7,7 +7,7 @@ This repository contains SQL scripts and Google Looker Studio dashboards designe
 The data for this project was extracted from a PostgreSQL database containing four primary tables:
 * **Facebook Ads:** `facebook_ads_basic_daily`, `facebook_adset`, `facebook_campaign`
 * **Google Ads:** `google_ads_basic_daily`
-![Facebook_and_Google_ads.png](https://github.com/Dimsohub/Goit/blob/0c02617e7a9e8f0fd3c05dbdfeda412a7de8e341/Facebook_and_Google_ads.png)
+![Facebook_and_Google_ads.png]([https://github.com/Dimsohub/Goit/blob/0c02617e7a9e8f0fd3c05dbdfeda412a7de8e341/Facebook_and_Google_ads.png](https://drive.google.com/file/d/1eR33Jd9KA-m174hAf2KwHb1KffGqP4MB/view?usp=sharing)
 
 ## Tools
 Dbeaver, Looker Studio
