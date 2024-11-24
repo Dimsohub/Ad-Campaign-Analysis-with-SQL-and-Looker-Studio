@@ -9,3 +9,5 @@ The data for this project was extracted from a PostgreSQL database containing fo
 * **Google Ads:** `google_ads_basic_daily`
 ![Facebook_and_Google_ads.png](https://github.com/Dimsohub/Goit/blob/0c02617e7a9e8f0fd3c05dbdfeda412a7de8e341/Facebook_and_Google_ads.png)
 
+## Tools
+Dbeaver, Looker Studio
