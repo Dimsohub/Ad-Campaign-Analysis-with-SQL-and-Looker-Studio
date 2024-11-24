@@ -140,5 +140,84 @@ This SQL query combines data from Facebook Ads and Google Ads into a single data
 4. **Grouping and Sorting:**
    - It groups the results by `ad_date` and `media_source`.
    - It sorts the results by `ad_date` in descending order and then by `media_source` in descending order.
+  
+### Query 3. Combined Ad Set Daily Performance
+
+~~~SQL
+WITH combi_data AS (
+SELECT
+	fbd.ad_date,
+	'Facebook Ads' AS media_source,
+	fc.campaign_name,
+	fa.adset_name,
+	fbd.spend,
+	fbd.impressions,
+	fbd.reach,
+	fbd.clicks,
+	fbd.leads,
+	fbd.value
+FROM
+	facebook_ads_basic_daily fbd
+LEFT JOIN facebook_adset fa ON
+	fbd.adset_id = fa.adset_id
+LEFT JOIN facebook_campaign fc ON
+	fbd.campaign_id = fc.campaign_id
+WHERE
+		fbd.ad_date IS NOT NULL
+UNION ALL
+SELECT
+	g.ad_date,
+	'Google Ads' AS media_source,
+	g.campaign_name,
+	g.adset_name,
+	g.spend,
+	g.impressions,
+	g.reach,
+	g.clicks,
+	g.leads,
+	g.value
+FROM
+	google_ads_basic_daily g
+WHERE
+	g.ad_date IS NOT NULL	
+)
+SELECT
+	ad_date,
+	media_source,
+	campaign_name,
+	adset_name,
+	sum (spend) AS total_spend,
+	sum (impressions) AS total_impressions,
+	sum (clicks) AS total_clicks,
+	sum (value) AS total_value
+FROM
+	combi_data
+GROUP BY
+	ad_date,
+	media_source,
+	campaign_name,
+	adset_name
+ORDER BY 
+	ad_date DESC;
+~~~
+
+This SQL query combines data from Facebook Ads and Google Ads into a single dataset, providing a detailed view of campaign and ad set performance.
+
+**Here's a breakdown:**
+
+1. **Data Combination:**
+   - It merges data from `facebook_ads_basic_daily`, `facebook_adset`, and `facebook_campaign` tables for Facebook Ads.
+   - It merges data from the `google_ads_basic_daily` table for Google Ads.
+   - The resulting dataset includes information about ad date, media source, campaign name, ad set name, spend, impressions, reach, clicks, leads, and value.
+
+2. **Data Aggregation:**
+   - It groups the combined data by `ad_date`, `media_source`, `campaign_name`, and `adset_name`.
+   - It calculates the total spend, impressions, clicks, and value for each group.
+
+3. **Result Ordering:**
+   - It sorts the results by `ad_date` in descending order.
+
+**In essence, this query provides a consolidated view of advertising performance across both platforms, allowing for detailed analysis and comparison of campaigns and ad sets.**
+
 
  
