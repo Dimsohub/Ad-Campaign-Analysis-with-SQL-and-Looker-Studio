@@ -18,7 +18,6 @@ DBeaver, Looker Studio
 ### Calculating key metrics for each day and campaign
 
 '''
-
 SELECT
 	f.ad_date,
 	f.campaign_id,
