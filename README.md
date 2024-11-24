@@ -17,3 +17,35 @@ DBeaver, Looker Studio
 
 ### Calculating key metrics for each day and campaign
 
+'''
+
+SELECT
+	f.ad_date,
+	f.campaign_id,
+	sum (f.spend) AS spend,
+	sum (f.impressions) AS impressions,
+	sum (f.clicks) AS clicks,
+	sum (f.value) AS value,
+	sum (f.spend) / sum (f.clicks) AS cpc,
+	round((sum(f.spend) ::NUMERIC / sum(f.impressions)) * 1000,
+	2) AS cpm,
+	round((sum(f.clicks) ::NUMERIC / sum(f.impressions)) * 100,
+	2) AS ctr,
+	round((((sum(f.value) - sum(f.spend)) ::NUMERIC / sum(f.spend))) * 100,
+	2) AS romi
+FROM
+	facebook_ads_basic_daily f
+WHERE 
+	f.campaign_id IS NOT NULL
+	AND f.clicks > 0
+	AND f.impressions > 0
+	AND f.spend > 0
+	AND f.impressions > 0
+GROUP BY 
+	f.ad_date,
+	f.campaign_id
+ORDER BY
+	f.ad_date DESC;
+ '''
+
+ 
