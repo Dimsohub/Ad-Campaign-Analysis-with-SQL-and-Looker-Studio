@@ -60,5 +60,86 @@ This SQL query analyzes Facebook ad performance data from the `facebook_ads_basi
 
 The query filters out records with zero clicks, impressions, or spend to avoid division by zero errors. It then groups the results by date and campaign ID and sorts them by date in descending order.
 
+### Query 2. Daily Ad Performance by Platform 
+
+~~~SQL
+WITH combined_ads AS (
+SELECT
+		ad_date,
+	'Facebook Ads' AS media_source,
+	spend,
+	impressions,
+	reach,
+	clicks,
+	leads,
+	value
+FROM
+	facebook_ads_basic_daily f
+WHERE
+		ad_date IS NOT NULL
+UNION ALL
+SELECT
+	ad_date,
+	'Google Ads' AS media_source,
+	spend,
+	impressions,
+	reach,
+	clicks,
+	leads,
+	value
+FROM
+	google_ads_basic_daily g
+WHERE
+	ad_date IS NOT NULL
+)
+SELECT
+	ad_date,
+	media_source,
+	sum (spend) / sum (clicks) AS CPC,
+	round((sum(spend)::NUMERIC / sum(impressions)) * 1000,
+	2) AS CPM,
+	round((sum(clicks)::NUMERIC / sum(impressions)) * 100,
+	2) AS CTR,
+	round((((sum(value) - sum(spend))::NUMERIC / sum(spend))) * 100,
+	2) AS ROMI
+FROM
+	combined_ads
+WHERE
+	reach > 0
+	AND leads > 0
+	AND clicks > 0
+	AND impressions > 0
+	AND spend > 0
+	AND impressions > 0
+GROUP BY
+	ad_date,
+	media_source
+ORDER BY
+	ad_date,
+	media_source DESC;
+~~~
+
+This SQL query combines data from Facebook Ads and Google Ads into a single dataset, calculates key performance metrics, and filters out irrelevant data.
+
+Here's a breakdown:
+
+Data Combination:
+
+It merges data from facebook_ads_basic_daily and google_ads_basic_daily tables into a single Common Table Expression (CTE) named combined_ads.
+It adds a media_source column to differentiate between the two platforms.
+Metric Calculation:
+
+It calculates the following metrics for each date and media source:
+CPC (Cost Per Click): Average cost per click.
+CPM (Cost Per Mille): Cost per 1000 impressions.
+CTR (Click-Through Rate): Percentage of impressions that resulted in clicks.
+ROMI (Return on Marketing Investment): Percentage return on investment.
+Data Filtering:
+
+It filters the data to exclude records with zero values for reach, leads, clicks, impressions, and spend to avoid division by zero errors.
+Grouping and Sorting:
+
+It groups the results by ad_date and media_source.
+It sorts the results by ad_date in descending order and then by media_source in descending order.
 
  
