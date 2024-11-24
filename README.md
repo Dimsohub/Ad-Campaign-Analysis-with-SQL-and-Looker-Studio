@@ -13,3 +13,7 @@ The data for this project was extracted from a PostgreSQL database containing fo
 ## Tools
 DBeaver, Looker Studio
 
+## SQL Queries
+
+### Calculating key metrics for each day and campaign
+
