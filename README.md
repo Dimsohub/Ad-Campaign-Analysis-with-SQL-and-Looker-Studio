@@ -47,4 +47,6 @@ ORDER BY
 	f.ad_date DESC;
  ~~~
 
+The query filters out records with zero clicks, impressions, or spend to avoid division by zero errors. It then groups the results by date and campaign ID and sorts them by date in descending order.
+
  
