@@ -121,25 +121,24 @@ ORDER BY
 
 This SQL query combines data from Facebook Ads and Google Ads into a single dataset, calculates key performance metrics, and filters out irrelevant data.
 
-Here's a breakdown:
+**Here's a breakdown:**
 
-Data Combination:
+1. **Data Combination:**
+   - It merges data from `facebook_ads_basic_daily` and `google_ads_basic_daily` tables into a single Common Table Expression (CTE) named `combined_ads`.
+   - It adds a `media_source` column to differentiate between the two platforms.
 
-It merges data from facebook_ads_basic_daily and google_ads_basic_daily tables into a single Common Table Expression (CTE) named combined_ads.
-It adds a media_source column to differentiate between the two platforms.
-Metric Calculation:
+2. **Metric Calculation:**
+   - It calculates the following metrics for each date and media source:
+     - **CPC (Cost Per Click):** Average cost per click.
+     - **CPM (Cost Per Mille):** Cost per 1000 impressions.
+     - **CTR (Click-Through Rate):** Percentage of impressions that resulted in clicks.
+     - **ROMI (Return on Marketing Investment):** Percentage return on investment.
 
-It calculates the following metrics for each date and media source:
-CPC (Cost Per Click): Average cost per click.
-CPM (Cost Per Mille): Cost per 1000 impressions.
-CTR (Click-Through Rate): Percentage of impressions that resulted in clicks.
-ROMI (Return on Marketing Investment): Percentage return on investment.
-Data Filtering:
+3. **Data Filtering:**
+   - It filters the data to exclude records with zero values for `reach`, `leads`, `clicks`, `impressions`, and `spend` to avoid division by zero errors.
 
-It filters the data to exclude records with zero values for reach, leads, clicks, impressions, and spend to avoid division by zero errors.
-Grouping and Sorting:
-
-It groups the results by ad_date and media_source.
-It sorts the results by ad_date in descending order and then by media_source in descending order.
+4. **Grouping and Sorting:**
+   - It groups the results by `ad_date` and `media_source`.
+   - It sorts the results by `ad_date` in descending order and then by `media_source` in descending order.
 
  
