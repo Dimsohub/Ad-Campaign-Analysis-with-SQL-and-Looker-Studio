@@ -219,7 +219,7 @@ This SQL query combines data from Facebook Ads and Google Ads into a single data
 
 **In essence, this query provides a consolidated view of advertising performance across both platforms, allowing for detailed analysis and comparison of campaigns and ad sets.**
 
-### Query 3. For Google Looker Studio
+### Query 4. For Google Looker Studio
 
 ~~~SQL
 WITH combined_ads AS (
