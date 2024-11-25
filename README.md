@@ -651,6 +651,30 @@ This SQL query combines data from Facebook Ads and Google Ads, extracts UTM camp
 
 ## Ad Campaign Analysis: Key Findings and Optimization Recommendations
 
+### Key Findings:
+
+* **Growth in spending and ROMI in early 2021:** There was a significant increase in both overall advertising spending and ROMI in early 2021, indicating high campaign effectiveness during this period.
+* **Stabilization and decline:** Following the peak in early 2021, there was a trend towards stabilization and even a decline in both spending and ROMI. This could be attributed to various factors such as seasonality, changing market conditions, or campaign optimizations.
+* **Sharp decline in late 2022:** A sharp decrease in both spending and ROMI was observed in late 2022, possibly indicating significant changes in advertising strategy or external factors impacting campaign effectiveness.
+* **CPC variation:** Cost per click (CPC) varied significantly, with lower values for "Discounts" and "Crazy discounts" campaigns and higher values for "Expansion" and "Brand" campaigns. This could be due to differing levels of competition in respective niches or targeting specifics.
+* **CPM variation:** Cost per thousand impressions (CPM) also showed significant differences. Higher CPM values were typical for campaigns with a wide audience or premium placements.
+* **CTR variation:** Click-through rate (CTR) varied depending on the campaign type and creatives. "Discounts" and "New items" campaigns had the highest CTRs, suggesting their attractiveness to users.
+* **ROMI variation:** Return on marketing investment (ROMI) also varied significantly across different campaign types. "Promos" and "Trendy" campaigns demonstrated the highest ROMI values, indicating their high effectiveness.
+
+### Recommendations for Optimization:
+* **Analyze the sharp decline in late 2022:** Conduct a detailed analysis to identify the causes of this significant drop.
+* **Compare across channels:** Compare the effectiveness of advertising campaigns across different channels (e.g., social media, search engines) to identify the most effective ones.
+* **Test new strategies:** Continuously test new advertising strategies, audiences, and creatives to find optimal solutions.
+* **Monitor competitors:** Keep an eye on competitors' actions and adjust your advertising strategy accordingly.
+* **Utilize analytics tools:** Use analytics tools to collect and analyze data on campaign effectiveness.
+* **Optimize spending:** Conduct a deeper analysis of low-ROMI campaigns to identify the reasons for low efficiency and take measures to optimize them (e.g., adjust bids, change creatives, refine target audience).
+* **Focus on effective channels:** Pay more attention to high-ROMI campaigns like "Promos" and "Trendy," considering increasing their budgets.
+* **Test new formats:** To improve campaign effectiveness, test new advertising formats, creatives, and target audiences.
+* **Analyze seasonality:** Consider seasonal demand fluctuations and adjust advertising budgets accordingly.
+* **Use analytics tools:** Use analytics tools to monitor campaign performance and identify trends for informed decision-making.
+
+**In essence, the analysis suggests that while the company has a diverse range of advertising campaigns, there's room for optimization. By focusing on high-performing campaigns, testing new strategies, and continuously monitoring performance, the company can improve the overall effectiveness of its advertising efforts.**
+
 
 
 
