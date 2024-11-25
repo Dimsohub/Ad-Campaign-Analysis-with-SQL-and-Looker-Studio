@@ -17,7 +17,7 @@ LEFT JOIN facebook_adset fa ON
 LEFT JOIN facebook_campaign fc ON
 	fbd.campaign_id = fc.campaign_id
 WHERE
-		fbd.ad_date IS NOT NULL
+	fbd.ad_date IS NOT NULL
 UNION ALL
 SELECT
 	g.ad_date,
