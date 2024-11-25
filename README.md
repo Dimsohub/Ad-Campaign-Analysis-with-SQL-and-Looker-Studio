@@ -219,5 +219,88 @@ This SQL query combines data from Facebook Ads and Google Ads into a single data
 
 **In essence, this query provides a consolidated view of advertising performance across both platforms, allowing for detailed analysis and comparison of campaigns and ad sets.**
 
+### Query 3. For Google Looker Studio
+
+~~~SQL
+WITH combined_ads AS (
+SELECT
+	ad_date,
+	'Facebook Ads' AS media_source,
+	spend,
+	impressions,
+	reach,
+	clicks,
+	leads,
+	value
+FROM
+	facebook_ads_basic_daily f
+WHERE
+		ad_date IS NOT NULL
+UNION ALL
+SELECT
+	ad_date,
+	'Google Ads' AS media_source,
+	spend,
+	impressions,
+	reach,
+	clicks,
+	leads,
+	value
+FROM
+	google_ads_basic_daily g
+WHERE
+	ad_date IS NOT NULL
+)
+SELECT
+	ad_date,
+	media_source,
+	sum (spend) AS spend,
+	sum (impressions) AS impressions,
+	sum (clicks) AS clicks,
+	sum (value) AS value
+FROM
+	combined_ads
+WHERE
+	reach > 0
+	AND leads > 0
+	AND clicks > 0
+	AND impressions > 0
+	AND spend > 0
+	AND impressions > 0
+GROUP BY
+	ad_date,
+	media_source
+ORDER BY
+	ad_date,
+	media_source DESC;
+~~~
+
+This SQL query combines data from Facebook Ads and Google Ads into a single dataset and calculates aggregated metrics for each day and media source. 
+
+**Here's a breakdown:**
+
+1. **Data Combination:**
+   - Merges data from `facebook_ads_basic_daily` and `google_ads_basic_daily` tables.
+   - Adds a `media_source` column to distinguish between the two platforms.
+
+2. **Data Filtering:**
+   - Filters out records with zero values for `reach`, `leads`, `clicks`, `impressions`, and `spend` to avoid division by zero errors.
+
+3. **Metric Calculation:**
+   - Calculates the total `spend`, `impressions`, `clicks`, and `value` for each day and media source.
+
+4. **Result Ordering:**
+   - Sorts the results by `ad_date` in descending order.
+
+In essence, this query provides a consolidated view of advertising performance across both platforms, allowing for comparison and analysis of overall campaign performance.
+> Additional calculated fields have been created in Google Looker Studio:**
+> Total Ad Spend or Ad Spend
+> CPC (Cost Per Click)
+> CPM (Cost Per Mille or Cost Per Thousand Impressions)
+> CTR (Click-Through Rate)
+> ROMI (Return on Marketing Investment)
+
+
+
 
  
