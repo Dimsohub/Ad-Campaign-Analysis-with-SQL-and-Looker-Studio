@@ -649,7 +649,7 @@ This SQL query combines data from Facebook Ads and Google Ads, extracts UTM camp
 
 **In essence, this query provides a detailed analysis of campaign performance over time, allowing you to identify trends and make data-driven decisions.**
 
-## Analysis Results: Key Findings and Optimization Recommendations
+## Ad Campaign Analysis: Key Findings and Optimization Recommendations
 
 
 
