@@ -303,12 +303,24 @@ Additional calculated fields have been created in Google Looker Studio:
 
 Based on the query and calculated fields, three graphs were constructed.
 
-Based on the contents of the document, here are the suggested English titles for the charts:
-
 1. **Total Ad Spend and ROMI Over Time**  
    Description: This chart shows the monthly advertising spend and the Return on Marketing Investment (ROMI) from November 2020 to November 2022.
 
    ![ad_spend](5.png)
+
+2. **Count of Active Campaigns by Month**  
+   Description: This chart tracks the number of active advertising campaigns for each month over the same period.
+
+   ![active_cmp](6.png)
+
+4. **Breakdown of Total Ad Spend by Campaign Type**  
+   Description: This chart categorizes ad spend by campaign types such as "Expansion," "Lookalike," and others, along with key metrics like CPC, CPM, CTR, and ROMI.
+
+   ![total](7.png)
+
+   
+
+
 
 
 
