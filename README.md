@@ -293,6 +293,7 @@ This SQL query combines data from Facebook Ads and Google Ads into a single data
    - Sorts the results by `ad_date` in descending order.
 
 In essence, this query provides a consolidated view of advertising performance across both platforms, allowing for comparison and analysis of overall campaign performance.
+
 Additional calculated fields have been created in Google Looker Studio:
 1. Total Ad Spend or Ad Spend
 2. CPC (Cost Per Click)
