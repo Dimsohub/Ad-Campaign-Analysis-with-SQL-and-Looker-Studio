@@ -301,6 +301,17 @@ Additional calculated fields have been created in Google Looker Studio:
 4. CTR (Click-Through Rate)
 5. ROMI (Return on Marketing Investment)
 
+Based on the query and calculated fields, three graphs were constructed.
+
+Based on the contents of the document, here are the suggested English titles for the charts:
+
+1. **Total Ad Spend and ROMI Over Time**  
+   Description: This chart shows the monthly advertising spend and the Return on Marketing Investment (ROMI) from November 2020 to November 2022.
+
+   ![ad_spend](5.png)
+
+
+
 
 
 
