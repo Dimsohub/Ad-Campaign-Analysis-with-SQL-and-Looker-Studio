@@ -163,7 +163,7 @@ LEFT JOIN facebook_adset fa ON
 LEFT JOIN facebook_campaign fc ON
 	fbd.campaign_id = fc.campaign_id
 WHERE
-		fbd.ad_date IS NOT NULL
+        fbd.ad_date IS NOT NULL
 UNION ALL
 SELECT
 	g.ad_date,
@@ -235,7 +235,7 @@ SELECT
 FROM
 	facebook_ads_basic_daily f
 WHERE
-		ad_date IS NOT NULL
+        ad_date IS NOT NULL
 UNION ALL
 SELECT
 	ad_date,
@@ -293,12 +293,12 @@ This SQL query combines data from Facebook Ads and Google Ads into a single data
    - Sorts the results by `ad_date` in descending order.
 
 In essence, this query provides a consolidated view of advertising performance across both platforms, allowing for comparison and analysis of overall campaign performance.
-> Additional calculated fields have been created in Google Looker Studio:**
-> Total Ad Spend or Ad Spend
-> CPC (Cost Per Click)
-> CPM (Cost Per Mille or Cost Per Thousand Impressions)
-> CTR (Click-Through Rate)
-> ROMI (Return on Marketing Investment)
+Additional calculated fields have been created in Google Looker Studio:**
+1. Total Ad Spend or Ad Spend
+2. CPC (Cost Per Click)
+3. CPM (Cost Per Mille or Cost Per Thousand Impressions)
+4. CTR (Click-Through Rate)
+5. ROMI (Return on Marketing Investment)
 
 
 
