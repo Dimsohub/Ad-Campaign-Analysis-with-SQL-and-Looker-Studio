@@ -11,7 +11,7 @@ SELECT
 FROM
 	facebook_ads_basic_daily f
 WHERE
-		ad_date IS NOT NULL
+	ad_date IS NOT NULL
 UNION ALL
 SELECT
 	ad_date,
