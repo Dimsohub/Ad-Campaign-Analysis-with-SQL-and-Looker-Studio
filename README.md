@@ -311,12 +311,12 @@ Based on the query and calculated fields, three graphs were constructed.
 2. **Count of Active Campaigns by Month**  
    Description: This chart tracks the number of active advertising campaigns for each month over the same period.
 
-   ![active_cmp](6.png)
+   ![active_cmp](Images/6.png)
 
 4. **Breakdown of Total Ad Spend by Campaign Type**  
    Description: This chart categorizes ad spend by campaign types such as "Expansion," "Lookalike," and others, along with key metrics like CPC, CPM, CTR, and ROMI.
 
-   ![total](7.png)
+   ![total](Images/7.png)
 
 ### Query 5. Comprehensive Ad Campaign Performance Report with UTM Tracking
 
